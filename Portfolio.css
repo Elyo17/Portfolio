@@ -263,6 +263,15 @@ section {
     margin-left: 450px;
 }
 
+.images4{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    gap: 8vh;
+    padding: 10px;
+    margin-left: 450px;
+}
+
 #entrer{
     font-size: 13px;
 }
