@@ -258,7 +258,7 @@ section {
     display: flex;
     justify-content: center;
     width: 200px;
-    gap: 5vh;
+    gap: 8vh;
     padding: 10px;
     margin-left: 450px;
 }
@@ -288,13 +288,13 @@ section {
 }
 
 #jeu{
-    margin-right: 500px;
+    margin-right: 800px;
     margin-top: 3px;
     font-size: 13px;
 }
 
 #pass{
-    margin-left: 450px;
+    margin-left: 500px;
     margin-top: -30px;
     font-size: 13px;
 }
