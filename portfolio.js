@@ -5,12 +5,22 @@ function toggleDescription(element) {
 
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        let target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
+        const href = this.getAttribute('href');
 
-        document.querySelectorAll('nav a').forEach(a => a.style.color = "white");
-        this.style.color = "#f39c12"; 
+        // Si c'est une ancre interne (commence par #), on gère le scroll
+        if (href.startsWith("#")) {
+            e.preventDefault();
+
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Changement de couleur des liens
+            document.querySelectorAll('nav a').forEach(a => a.style.color = "white");
+            this.style.color = "#00FF00";
+        }
+        // Sinon (ex: lien vers un PDF), on laisse le comportement par défaut
     });
 });
 
